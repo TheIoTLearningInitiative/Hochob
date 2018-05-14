@@ -5,13 +5,13 @@ sudo apt install git
 sudo apt install fortunes
 
 # Hochob Server Services Automation Home Assistant
-sudo apt install python3-setuptools
-sudo apt install python3-pip
-sudo pip3 install --upgrade pip
-sudo pip3 install homeassistant
-sudo pip3 install flask_sqlalchemy
-sudo pip3 install sqlalchemy
-sudo pip3 install xmltodict
+#sudo apt install python3-setuptools
+#sudo apt install python3-pip
+#sudo pip3 install --upgrade pip
+#sudo pip3 install homeassistant
+#sudo pip3 install flask_sqlalchemy
+#sudo pip3 install sqlalchemy
+#sudo pip3 install xmltodict
 
 # Hochob Server Services Calendar
 sudo pip install httplib2
