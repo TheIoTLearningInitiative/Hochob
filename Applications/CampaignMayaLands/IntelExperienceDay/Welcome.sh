@@ -32,6 +32,7 @@ Tbd
 
 LogPid.sh $WO_PID $WO_NAME
 
-HostExternal.sh robot spanish "${LOCAL_INSTITUTION_NAME}" "${LOCAL_EVENT_NAME_SPANISH}"
+AmikooVoice.sh spanish "5 4 3 2 1 0"
+# HostExternal.sh robot spanish "${LOCAL_INSTITUTION_NAME}" "${LOCAL_EVENT_NAME_SPANISH}"
 
 # End of File
