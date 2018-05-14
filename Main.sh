@@ -22,7 +22,7 @@ export HOCHOB_SERVER_CONFIGURATION_AMIKOOAVAILABLE=$HOCHOB_SERVER_CONFIGURATION/
 # Hochob Server Root #
 # ------------------ #
 
-cd ~/CodeLabs/Hochob/
+cd ~/Hochob/
 export HOCHOB_ROOT=`pwd`
 
 # -------------------------- #
