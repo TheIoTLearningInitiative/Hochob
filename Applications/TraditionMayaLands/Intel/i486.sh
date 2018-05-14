@@ -6,7 +6,7 @@ set -x
 # Variables
 # =============================================================================
 
-. ~/CodeLabs/Hochob/Main.sh
+. ~/Hochob/Main.sh
 
 export i486_PID=$$
 export i486_NAME="i486"
