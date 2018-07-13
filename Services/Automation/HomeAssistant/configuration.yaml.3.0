@@ -347,6 +347,26 @@ homeassistant:
       friendly_name: Intel Aero
       icon: mdi:drone
 
+    # Campaign Maya Lands :: Intel Experience Day
+
+    script.iedone:
+      friendly_name: Hola, bienvenidos...
+      icon: mdi:numeric-1-box
+
+    script.iedtwo:
+      friendly_name: Que es eso?
+      icon: mdi:numeric-2-box
+
+    script.iedthree:
+      friendly_name: Como yo?
+      icon: mdi:numeric-3-box
+
+    script.ieddance:
+      friendly_name: Bailar...
+
+    script.iedwelcome:
+      friendly_name: Saludo
+
     # Campaign Maya Lands :: Internal
     
     automation.pop:
@@ -602,26 +622,20 @@ homeassistant:
     script.carasygestos:
       friendly_name: Carta Aleatoria
       icon: mdi:gamepad-variant
- 
-    # Intel Experience Day
 
-    script.iedone:
-      friendly_name: Hola, bienvenidos...
-      icon: mdi:numeric-1-box
+    # Uulab Lands
 
-    script.iedtwo:
-      friendly_name: Que es eso?
-      icon: mdi:numeric-2-box
+    script.uulablandswelcome:
+      friendly_name: Bienvenidos a su casa!
+      icon: mdi:gamepad-variant
 
-    script.iedthree:
-      friendly_name: Como yo?
-      icon: mdi:numeric-3-box
+    script.uulablandschatting
+      friendly_name: Pregunta al Azar!
+      icon: mdi:gamepad-variant
 
-    script.ieddance:
-      friendly_name: Bailar...
-
-    script.iedwelcome:
-      friendly_name: Saludo
+    script.uulablandsthankyou
+      friendly_name: Hora de Despedirnos
+      icon: mdi:gamepad-variant
 
 # Enables the frontend
 frontend:
@@ -1087,16 +1101,6 @@ script:
     sequence:
       - service: shell_command.keypadfour
 
-  # Games
-
-  loteriamexicana:
-    sequence:
-      - service: shell_command.loteriamexicana
-
-  carasygestos:
-    sequence:
-      - service: shell_command.carasygestos
-
   # Intel Experience Day
 
   iedone:
@@ -1118,6 +1122,16 @@ script:
   iedwelcome:
     sequence:
       - service: shell_command.iedwelcome
+
+  # Games
+
+  loteriamexicana:
+    sequence:
+      - service: shell_command.loteriamexicana
+
+  carasygestos:
+    sequence:
+      - service: shell_command.carasygestos
 
 shell_command:
 
@@ -1240,6 +1254,14 @@ shell_command:
   
   intelaero: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/IntelAero/IntelAero.sh &
 
+  # Campaign Maya Lands :: Intel Experience Day
+  
+  iedone: ~/CodeLabs/Hochob/Services/Amikoo/Remote/AmikooVoice.sh spanish "Hola, bienvenidos al show de baile de Intel"
+  iedtwo: ~/CodeLabs/Hochob/Services/Amikoo/Remote/AmikooVoice.sh spanish "Que es eso"
+  iedthree: ~/CodeLabs/Hochob/Services/Amikoo/Remote/AmikooVoice.sh spanish "Como yo"
+  ieddance: ~/CodeLabs/Hochob/Applications/CalendarMayaLands/IntelExperienceDay/Dance.sh
+  iedwelcome: ~/CodeLabs/Hochob/Applications/CalendarMayaLands/IntelExperienceDay/Welcome.sh
+
   # Campaign Maya Lands :: Internal
 
   pop: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Internal/Pop.sh &
@@ -1294,14 +1316,6 @@ shell_command:
 
   loteriamexicana: ~/CodeLabs/Hochob/Services/Games/LoteriaMexicana/LoteriaMexicana.sh
   carasygestos: ~/CodeLabs/Hochob/Services/Games/CarasYGestos/CarasYGestos.sh
-
-  # Intel Experience Day
-  
-  iedone: ~/CodeLabs/Hochob/Services/Amikoo/Remote/AmikooVoice.sh spanish "Hola, bienvenidos al show de baile de Intel"
-  iedtwo: ~/CodeLabs/Hochob/Services/Amikoo/Remote/AmikooVoice.sh spanish "Que es eso"
-  iedthree: ~/CodeLabs/Hochob/Services/Amikoo/Remote/AmikooVoice.sh spanish "Como yo"
-  ieddance: ~/CodeLabs/Hochob/Applications/CalendarMayaLands/IntelExperienceDay/Dance.sh
-  iedwelcome: ~/CodeLabs/Hochob/Applications/CalendarMayaLands/IntelExperienceDay/Welcome.sh
 
 switch:
 
@@ -1809,10 +1823,12 @@ group:
     view: yes
     name: Campañas
     entities:
-      - group.campaignmayalandseventsinternal
       - group.campaignmayalandseventsexternal
-      - group.campaignmayalandsphotobooth
       - group.campaignmayalandsintelaero
+      - group.campaignmayalandsintelexperienceday
+      - group.campaignmayalandseventsinternal
+      - group.campaignmayalandsphotobooth
+      
 
   # Tradition Maya Lands
   
@@ -1854,20 +1870,12 @@ group:
       - group.gamesloteria
       - group.gamescarasygestos
 
-  intelexperiencedaylands:
-    view: yes
-    name: Intel Experience Day
-    entities:
-      - group.intelexperiencedaylandsopening
-      - group.intelexperiencedaylandsdance
-      - group.intelexperiencedaylandswelcome
-
   uulablands:
     view: yes
     name: Huéspedes
     entities:
       - group.uulablandswelcome
-      - group.uulablandsloteria
+      - group.uulablandsgames
       - group.uulablandschatting
       - group.uulablandsthankyou
 
@@ -2145,6 +2153,18 @@ group:
       - automation.intelaero
       - script.intelaero
 
+  # Campaign Maya Lands :: Intel Experience Day
+
+  campaignmayalandsintelexperienceday:
+    name: Intel® Experience Day
+    entities:
+      - script.iedone
+      - script.iedtwo
+      - script.iedthree
+      - script.ieddance
+      - script.iedwelcome
+      - automation.wo
+
   # Campaign Maya Lands :: Photo Booth
   
   campaignmayalandsphotobooth:
@@ -2316,28 +2336,8 @@ group:
     name: Caras Y Gestos
     entities:
       - script.carasygestos
-
-  # Intel Experience Day
-
-  intelexperiencedaylandsopening:
-    name: Escenario
-    entities:
-      - script.iedone
-      - script.iedtwo
-      - script.iedthree
-
-  intelexperiencedaylandsdance:
-    name: Baile
-    entities:
-      - script.ieddance
-
-  intelexperiencedaylandswelcome:
-    name: Bienvenida
-    entities:
-      - script.iedwelcome
-      - automation.wo
  
-  # Huespedes
+  # Uulab Lands
 
   uulablandswelcome:
     name: Bienvenida
@@ -2347,12 +2347,12 @@ group:
   uulablandsgames:
     name: Juegos
     entities:
+      - script.80286
       - script.loteriamexicana
 
   uulablandschatting:
     name: Cotorreo
     entities:
-      - script.80286
       - script.uulablandschatting
 
   uulablandsthankyou:
