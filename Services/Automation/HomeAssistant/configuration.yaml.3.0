@@ -331,26 +331,10 @@ homeassistant:
       friendly_name: Vista Previa Cámara
       icon: mdi:camera
 
-    # Campaign Maya Lands :: Internal
-    
-    automation.pop:
-      friendly_name: 30 segundos .. Bienvenida Robot
-      icon: mdi:calendar-clock
-
-    automation.sip:
-      friendly_name: 30 segundos .. Bienvenida Servidor
-      icon: mdi:calendar-clock
-
     # Campaign Maya Lands :: External
 
     automation.wo:
       friendly_name: 15 segundos .. Bienvenida Robot
-      icon: mdi:calendar-clock
-
-    # Campaign Maya Lands :: Photo Booth
-
-    automation.photoboothdonotforget:
-      friendly_name: 15 segundos .. No Olvides Photo Booth!
       icon: mdi:calendar-clock
 
     # Campaign Maya Lands :: Intel Aero
@@ -362,6 +346,22 @@ homeassistant:
     script.intelaero:
       friendly_name: Intel Aero
       icon: mdi:drone
+
+    # Campaign Maya Lands :: Internal
+    
+    automation.pop:
+      friendly_name: 30 segundos .. Bienvenida Robot
+      icon: mdi:calendar-clock
+
+    automation.sip:
+      friendly_name: 30 segundos .. Bienvenida Servidor
+      icon: mdi:calendar-clock
+
+    # Campaign Maya Lands :: Photo Booth
+
+    automation.photoboothdonotforget:
+      friendly_name: 15 segundos .. No Olvides Photo Booth!
+      icon: mdi:calendar-clock
 
     # Tradition Maya Lands :: San Valentin
     
@@ -1232,22 +1232,22 @@ shell_command:
   keypadthree: ~/CodeLabs/Hochob/Services/Keypad/KeypadMultipleChoice.sh virtual 3 &
   keypadfour: ~/CodeLabs/Hochob/Services/Keypad/KeypadMultipleChoice.sh virtual 4 &
 
+  # Campaign Maya Lands :: External
+
+  wo: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/External/Wo.sh &
+
+  # Campaign Maya Lands :: Intel Aero
+  
+  intelaero: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/IntelAero/IntelAero.sh &
+
   # Campaign Maya Lands :: Internal
 
   pop: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Internal/Pop.sh &
   sip: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Internal/Sip.sh &
 
-  # Campaign Maya Lands :: External
-
-  wo: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/External/Wo.sh &
-
   # Campaign Maya Lands :: Photo Boot
 
   photoboothdonotforget: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/PhotoBooth/DoNotForget.sh
-
-  # Campaign Maya Lands :: Intel Aero
-  
-  intelaero: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/IntelAero.sh &
 
   # Tradition Maya Lands :: San Valentin
 
@@ -1385,6 +1385,26 @@ automation:
         data:
           message: 'Home Assistant has started'
 
+  # Campaign Maya Lands :: External
+
+  - alias: wo
+    initial_state: 'off'
+    trigger:
+      platform: time
+      seconds: '/30'
+    action:
+      - service: shell_command.wo
+
+  # Campaign Maya Lands :: Intel Aero
+
+  - alias: intelaero
+    initial_state: 'off'
+    trigger:
+      platform: time
+      seconds: '/30'
+    action:
+      - service: shell_command.intelaero
+
   # Campaign Maya Lands :: Internal
 
   - alias: pop
@@ -1411,16 +1431,6 @@ automation:
     action:
       - service: shell_command.sip
 
-  # Campaign Maya Lands :: External
-
-  - alias: wo
-    initial_state: 'off'
-    trigger:
-      platform: time
-      seconds: '/30'
-    action:
-      - service: shell_command.wo
-
   # Campaign Maya Lands :: Photo Booth
 
   - alias: photoboothdonotforget
@@ -1430,16 +1440,6 @@ automation:
       seconds: '/15'
     action:
       - service: shell_command.photoboothdonotforget
-
-  # Campaign Maya Lands :: Intel Aero
-
-  - alias: intelaero
-    initial_state: 'off'
-    trigger:
-      platform: time
-      seconds: '/30'
-    action:
-      - service: shell_command.intelaero
 
   # Tradition Maya Lands :: San Valentin
 
@@ -2122,6 +2122,13 @@ group:
     entities:
       - switch.kaab
 
+  # Campaign Maya Lands :: External
+  
+  campaignmayalandseventsexternal:
+    name: Eventos Externos
+    entities:
+      - automation.wo
+
   # Campaign Maya Lands :: Internal
   
   campaignmayalandseventsinternal:
@@ -2130,12 +2137,13 @@ group:
       - automation.pop
       - automation.sip
 
-  # Campaign Maya Lands :: External
-  
-  campaignmayalandseventsexternal:
-    name: Eventos Externos
+  # Campaign Maya Lands :: Intel Aero
+
+  campaignmayalandsintelaero:
+    name: Intel® Aero
     entities:
-      - automation.wo
+      - automation.intelaero
+      - script.intelaero
 
   # Campaign Maya Lands :: Photo Booth
   
@@ -2143,14 +2151,6 @@ group:
     name: Photo Booth
     entities:
       - automation.photoboothdonotforget
-
-  # Campaign Maya Lands: Intel Aero
-
-  campaignmayalandsintelaero:
-    name: Intel® Aero
-    entities:
-      - automation.intelaero
-      - script.intelaero
 
   # Tradition Maya Lands :: San Valentin
 
