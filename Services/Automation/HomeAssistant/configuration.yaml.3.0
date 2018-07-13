@@ -1234,12 +1234,12 @@ shell_command:
 
   # Campaign Maya Lands :: Internal
 
-  pop: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Pop.sh &
-  sip: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Sip.sh &
+  pop: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Internal/Pop.sh &
+  sip: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Internal/Sip.sh &
 
-  # Campaign Maya Lands :: Internal
+  # Campaign Maya Lands :: External
 
-  wo: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/Wo.sh &
+  wo: ~/CodeLabs/Hochob/Applications/CampaignMayaLands/External/Wo.sh &
 
   # Campaign Maya Lands :: Photo Boot
 
