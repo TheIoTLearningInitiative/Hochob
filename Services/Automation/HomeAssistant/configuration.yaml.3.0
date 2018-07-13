@@ -1862,6 +1862,15 @@ group:
       - group.intelexperiencedaylandsdance
       - group.intelexperiencedaylandswelcome
 
+  uulablands:
+    view: yes
+    name: Huéspedes
+    entities:
+      - group.uulablandswelcome
+      - group.uulablandsloteria
+      - group.uulablandschatting
+      - group.uulablandsthankyou
+
   # Captain Maya Lands: Language
 
   captainmayalandslanguage:
@@ -2328,3 +2337,24 @@ group:
       - script.iedwelcome
       - automation.wo
  
+  # Huespedes
+
+  uulablandswelcome:
+    name: Bienvenida
+    entities:
+      - script.uulablandswelcome
+
+  uulablandsgames:
+    name: Juegos
+    entities:
+      - script.loteriamexicana
+
+  uulablandschatting:
+    name: Cotorreo
+    entities:
+      - script.uulablandschatting
+
+  uulablandsthankyou:
+    name: Bienvenida
+    entities:
+      - script.uulablandsthankyou
