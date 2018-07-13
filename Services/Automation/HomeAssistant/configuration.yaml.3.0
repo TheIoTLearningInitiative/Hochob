@@ -492,15 +492,15 @@ homeassistant:
     # Tradition Maya Lands :: Intel
 
     automation.4004:
-      friendly_name:  10 minutos .. Sonidos
+      friendly_name:  10 minutos .. Triki Sonidos
       icon: mdi:calendar-clock
 
     script.4004:
-      friendly_name: Sonidos
+      friendly_name: Triki Sonidos
       icon: mdi:speaker
 
     automation.8008:
-      friendly_name:  10 minutos .. Sonidos
+      friendly_name:  10 minutos .. Amikoo Sonidos
       icon: mdi:calendar-clock
 
     script.8008:
@@ -508,35 +508,35 @@ homeassistant:
       icon: mdi:speaker
 
     automation.8080:
-      friendly_name:  10 minutos .. Imágenes
+      friendly_name:  10 minutos .. Amikoo Imágenes
       icon: mdi:calendar-clock
 
     script.8080:
-      friendly_name: Imágenes
+      friendly_name: Amikoo Imágenes
       icon: mdi:file-image
 
     automation.8086:
-      friendly_name:  10 minutos .. Video
+      friendly_name:  10 minutos .. Amikoo Video
       icon: mdi:calendar-clock
 
     script.8086:
-      friendly_name: Video
+      friendly_name: Amikoo Video
       icon: mdi:file-video
 
     automation.80286:
-      friendly_name:  10 minutos .. Intel Bong
+      friendly_name:  10 minutos .. Amikoo Intel Bong
       icon: mdi:calendar-clock
 
     script.80286:
-      friendly_name: Intel Bong
+      friendly_name: Amikoo Intel Bong
       icon: mdi:face-profile
 
     automation.i486:
-      friendly_name:  10 minutos .. Intel Bong
+      friendly_name:  10 minutos .. Hochob Intel Bong
       icon: mdi:calendar-clock
 
     script.i486:
-      friendly_name: Intel Bong
+      friendly_name: Hochob Intel Bong
       icon: mdi:face-profile
 
     # Techie Maya Lands : System Health
@@ -2352,6 +2352,7 @@ group:
   uulablandschatting:
     name: Cotorreo
     entities:
+      - script.80286
       - script.uulablandschatting
 
   uulablandsthankyou:
