@@ -613,7 +613,7 @@ homeassistant:
       friendly_name: Hoy digo...
       icon: mdi:approval
 
-    # Games
+    # Game Maya Lands
 
     script.loteriamexicana:
       friendly_name: Loteria Mexicana
@@ -623,7 +623,7 @@ homeassistant:
       friendly_name: Carta Aleatoria
       icon: mdi:gamepad-variant
 
-    # Uulab Lands
+    # Uulab Maya Lands
 
     script.uulablandswelcome:
       friendly_name: Bienvenidos a su casa!
@@ -1123,7 +1123,7 @@ script:
     sequence:
       - service: shell_command.iedwelcome
 
-  # Games
+  # Game Maya Lands
 
   loteriamexicana:
     sequence:
@@ -1132,6 +1132,20 @@ script:
   carasygestos:
     sequence:
       - service: shell_command.carasygestos
+
+  # Uulab Maya Lands
+  
+  uulablandswelcome:
+    sequence:
+      - service: shell_command.uulablandswelcome
+ 
+  uulablandschatting:
+    sequence:
+      - service: shell_command.uulablandschatting
+
+  uulablandsthankyou:
+    sequence:
+      - service: shell_command.uulablandsthankyou
 
 shell_command:
 
@@ -1312,10 +1326,16 @@ shell_command:
   qualcomm: amixer -D pulse sset Master '{{ volume_level }}%'
   visitorsusb: ~/CodeLabs/Hochob/Services/Visitors/Usb.sh &
 
-  # Games
+  # Game Maya Lands
 
   loteriamexicana: ~/CodeLabs/Hochob/Services/Games/LoteriaMexicana/LoteriaMexicana.sh
   carasygestos: ~/CodeLabs/Hochob/Services/Games/CarasYGestos/CarasYGestos.sh
+
+  # Uulab Maya Lands
+
+  uulablandswelcome: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UulabLandsWelcome.sh
+  uulablandschatting: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UulabLandsChatting.sh
+  uulablandsthankyou: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UulabLandsThankYou.sh
 
 switch:
 
@@ -2327,6 +2347,8 @@ group:
     entities:
       - script.visitorsusb
 
+  # Game Maya Lands
+
   gamesloteria:
     name: Loteria
     entities:
@@ -2337,7 +2359,7 @@ group:
     entities:
       - script.carasygestos
  
-  # Uulab Lands
+  # Uulab Maya Lands
 
   uulablandswelcome:
     name: Bienvenida
