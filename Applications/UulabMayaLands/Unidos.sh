@@ -17,8 +17,8 @@ export UNIDOS_DIRECTORY=$(dirname "$UNIDOS_PATH")
 LOCAL_INSTITUTION_NAME=`Unidos`
 LOCAL_EVENT_NAME_SPANISH="Visital Intel 2018"
 LOCAL_PHRASE="Bienvenidos Unidos.\
-              Todos tenemos un lugar en el mundo, una misión en este hermoso camino que llamamos vida, \
-              Platica, Briko, Loteria, Mesa Robots, Armado Computadoras\
+              Todos tenemos un lugar en el mundo, una misión en este hermoso camino que llamamos vida.\
+              Platica, Briko, Loteria, Mesa Robots, Armado Computadoras.\
               Cada vez que te mueves, estremeces al mundo. Porque la unica forma de ser grande.\
               Es tiempo de devolverle la grandeza.
               Comparte, Confia, Transforma. Devuelve conciencia al mundo."
