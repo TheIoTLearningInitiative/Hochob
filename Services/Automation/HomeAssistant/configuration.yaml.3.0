@@ -2385,6 +2385,8 @@ group:
     name: Cotorreo
     entities:
       - script.pasion
+      - script.chip
+      - script.meccanoid
 
   uulabmayalandsthankyou:
     name: Bienvenida
