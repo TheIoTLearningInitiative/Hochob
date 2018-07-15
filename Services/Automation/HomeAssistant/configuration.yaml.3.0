@@ -1890,14 +1890,14 @@ group:
       - group.gamemayalandsloteria
       - group.gamemayalandscarasygestos
 
-  uulablands:
+  uulabmayalands:
     view: yes
     name: Huéspedes
     entities:
-      - group.uulablandswelcome
-      - group.uulablandsgames
-      - group.uulablandschatting
-      - group.uulablandsthankyou
+      - group.uulabmayalandswelcome
+      - group.uulabmayalandsgames
+      - group.uulabmayalandschatting
+      - group.uulabmayalandsthankyou
 
   # Captain Maya Lands: Language
 
@@ -2361,23 +2361,28 @@ group:
  
   # Uulab Maya Lands
 
-  uulablandswelcome:
+  uulabmayalandswelcome:
     name: Bienvenida
     entities:
       - script.unidos
 
-  uulablandsgames:
+  uulabmayalandsgames:
     name: Juegos
     entities:
       - script.80286
       - script.loteriamexicana
 
-  uulablandschatting:
+  uulabmayalandschatting:
     name: Cotorreo
     entities:
       - script.pasion
 
-  uulablandsthankyou:
+  uulabmayalandsthankyou:
     name: Bienvenida
     entities:
       - script.compromiso
+
+  uulabmayalandstechnical:
+    name: Technical
+    entities:
+      - script.empatia
