@@ -16,8 +16,9 @@ export UNIDOS_DIRECTORY=$(dirname "$UNIDOS_PATH")
 # Unidos
 LOCAL_INSTITUTION_NAME=`Unidos`
 LOCAL_EVENT_NAME_SPANISH="Visital Intel 2018"
-LOCAL_PHRASE="Hola \
-              Mundo"
+LOCAL_PHRASE="Bienvenidos Unidos a su segunda casa, Intel.\
+              Todos tenemos un lugar en el mundo, una misión en este hermoso camino que llamamos vida, \
+              "
 
 LOCAL_LANGUAGE[0]="spanish"
 
