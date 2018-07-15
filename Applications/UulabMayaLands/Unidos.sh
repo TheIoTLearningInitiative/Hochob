@@ -20,7 +20,7 @@ LOCAL_PHRASE="Bienvenidos Unidos.\
               Todos tenemos un lugar en el mundo, una misión en este hermoso camino que llamamos vida.\
               Platica, Briko, Loteria, Mesa Robots, Armado Computadoras.\
               Cada vez que te mueves, estremeces al mundo. Porque la unica forma de ser grande.\
-              Es tiempo de devolverle la grandeza.
+              Es tiempo de devolverle la grandeza.\
               Comparte, Confia, Transforma. Devuelve conciencia al mundo."
 
 LOCAL_LANGUAGE[0]="spanish"
