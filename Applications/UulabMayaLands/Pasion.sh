@@ -13,22 +13,20 @@ export PASION_NAME="Pasion"
 export PASION_PATH=$(readlink -f "$0")
 export PASION_DIRECTORY=$(dirname "$PASION_PATH")
 
-# Unidos
-LOCAL_INSTITUTION_NAME=`Pasion`
-LOCAL_EVENT_NAME_SPANISH="Visital Intel 2018"
-LOCAL_PHRASE="Hola \
-              Mundo"
-
-LOCAL_LANGUAGE[0]="spanish"
+LOCAL_PHRASE[0]="¿Cuál es tu animal favorito?"
+LOCAL_PHRASE[1]="¿Cuál es tu comida favorita?"
+LOCAL_PHRASE[2]="¿Cuál es tu deporte favorito?"
+LOCAL_PHRASE[3]="¿Como se llama tu aliado?"
+LOCAL_PHRASE[4]="¿Como me llamo yo?"
 
 # =============================================================================
 # Functions
 # =============================================================================
 
-chooseLanguage()
+choosePhrase()
 {
-    rand=$[ $RANDOM % 2 ]
-    LOCAL_LANGUAGE=${LOCAL_LANGUAGE[$rand]}
+    rand=$[ $RANDOM % 50 ]
+    LOCAL_PHRASE=${LOCAL_PHRASE[$rand]}
 }
 
 # =============================================================================
@@ -37,6 +35,7 @@ chooseLanguage()
 
 LogPid.sh $PASION_PID $PASION_NAME
 
-
+choosePhrase
+AmikooVoice.sh spanish "$LOCAL_PHRASE"
 
 # End of File
