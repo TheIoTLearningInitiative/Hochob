@@ -630,7 +630,7 @@ homeassistant:
       icon: mdi:gamepad-variant
 
     script.pasion
-      friendly_name: Pregunta al Azar!
+      friendly_name: Pregunta al Azar
       icon: mdi:gamepad-variant
 
     script.compromiso
