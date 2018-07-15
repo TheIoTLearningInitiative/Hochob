@@ -36,6 +36,10 @@ choosePhrase()
 LogPid.sh $PASION_PID $PASION_NAME
 
 choosePhrase
+
+AmikooCommunication.sh "Amikoo" "Audio" "TR2D2AgainSoundBibleCom.mp3"
+sleep .5
 AmikooVoice.sh spanish "$LOCAL_PHRASE"
+AmikooCommunication.sh "Amikoo" "Audio" "Stop"
 
 # End of File
