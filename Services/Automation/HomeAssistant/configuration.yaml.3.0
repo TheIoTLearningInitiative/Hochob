@@ -625,9 +625,17 @@ homeassistant:
 
     # Uulab Maya Lands
 
-    script.unidos:
-      friendly_name: Bienvenidos a su casa
-      icon: mdi:gamepad-variant
+    script.unidosbuenosdias:
+      friendly_name: Buenos Dias
+
+    script.unidosyosoylupe:
+      friendly_name: Yo Soy Lupe
+
+    script.unidosgracias:
+      friendly_name: Gracias
+
+    script.unidosactividades:
+      friendly_name: Actividades
 
     script.pasion:
       friendly_name: Pregunta al Azar
@@ -635,11 +643,9 @@ homeassistant:
 
     script.compromiso:
       friendly_name: Hasta Pronto
-      icon: mdi:gamepad-variant
 
     script.empatia:
       friendly_name: Verifiquemos Infraestructura
-      icon: mdi:gamepad-variant
 
 # Enables the frontend
 frontend:
@@ -1139,10 +1145,22 @@ script:
 
   # Uulab Maya Lands
   
-  unidos:
+  unidosbuenosdias:
     sequence:
-      - service: shell_command.unidos
- 
+      - service: shell_command.unidosbuenosdias
+
+  unidosyosoylupe:
+    sequence:
+      - service: shell_command.unidosyosoylupe
+
+  unidosgracias:
+    sequence:
+      - service: shell_command.unidosgracias
+
+  unidosactividades:
+    sequence:
+      - service: shell_command.unidosactividades
+
   pasion:
     sequence:
       - service: shell_command.pasion
@@ -1341,7 +1359,10 @@ shell_command:
 
   # Uulab Maya Lands
 
-  unidos: ~/CodeLabs/Hochob/Applications/UulabMayaLands/Unidos.sh
+  unidosbuenosdias: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosBuenosDias.sh
+  unidosyosoylupe: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosYoSoyLupe.sh
+  unidosgracias: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosGracias.sh
+  unidosactividades: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosActividades.sh
   pasion: ~/CodeLabs/Hochob/Applications/UulabMayaLands/Pasion.sh
   compromiso: ~/CodeLabs/Hochob/Applications/UulabMayaLands/Compromiso.sh
   empatia: ~/CodeLabs/Hochob/Applications/UulabMayaLands/Empatia.sh
@@ -2374,7 +2395,10 @@ group:
   uulabmayalandswelcome:
     name: Bienvenida
     entities:
-      - script.unidos
+      - script.unidosbuenosdias
+      - script.unidosyosoylupe
+      - script.unidosgracias
+      - script.unidosactividades
 
   uulabmayalandsgames:
     name: Juegos
