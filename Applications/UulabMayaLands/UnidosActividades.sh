@@ -21,7 +21,7 @@ LOCAL_PHRASE="Primero, escucharemos a un Ingeniero guapo e inteligente platicarn
               tu primera computadora, armaras y transformaras tu primer carro autónomo, 
               jugaras con distintos tipos de robots y para complementar con nuestra diversión, \
               jugaremos lotería, yo el Robot Lupe, diciéndoles las cartas. \
-              Deseo de todo corazón que todos Unidos se diviertan.\
+              Deseo de todo corazón que todos Unidos se diviertan. Intel dice gracias.\
               "
 
 # =============================================================================
