@@ -14,7 +14,7 @@ export UNIDOS_PATH=$(readlink -f "$0")
 export UNIDOS_DIRECTORY=$(dirname "$UNIDOS_PATH")
 
 # Unidos Buenos Dias
-LOCAL_PHRASE="Hola Unidos, muy buenos doias tengan todos ustedes."
+LOCAL_PHRASE="Hola Unidos, muy buenos dias tengan todos ustedes."
 
 # =============================================================================
 # Functions
