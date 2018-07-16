@@ -37,8 +37,8 @@ chooseLanguage()
 
 LogPid.sh $EMPATIA_PID $EMPATIA_NAME
 
-Amikoo.sh amikoo/headright && sleep .6
 Amikoo.sh amikoo/headleft && sleep .6
+Amikoo.sh amikoo/headright && sleep .6
 
 AmikooVoice.sh spanish \
     "Hola. Uno, dos, tres. Hola, Hola"
