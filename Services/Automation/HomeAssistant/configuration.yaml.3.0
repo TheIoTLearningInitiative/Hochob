@@ -625,6 +625,9 @@ homeassistant:
 
     # Uulab Maya Lands
 
+    script.unidoshola:
+      friendly_name: Hola
+
     script.unidosbuenosdias:
       friendly_name: Buenos Dias
 
@@ -1144,7 +1147,11 @@ script:
       - service: shell_command.carasygestos
 
   # Uulab Maya Lands
-  
+
+  unidoshola:
+    sequence:
+      - service: shell_command.unidoshola
+
   unidosbuenosdias:
     sequence:
       - service: shell_command.unidosbuenosdias
@@ -1359,6 +1366,7 @@ shell_command:
 
   # Uulab Maya Lands
 
+  unidoshola: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosHola.sh
   unidosbuenosdias: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosBuenosDias.sh
   unidosyosoylupe: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosYoSoyLupe.sh
   unidosgracias: ~/CodeLabs/Hochob/Applications/UulabMayaLands/UnidosGracias.sh
@@ -1924,6 +1932,7 @@ group:
     view: yes
     name: Huéspedes
     entities:
+      - group.uulabmayalandshello
       - group.uulabmayalandswelcome
       - group.uulabmayalandsgames
       - group.uulabmayalandschatting
@@ -2391,6 +2400,11 @@ group:
       - script.carasygestos
  
   # Uulab Maya Lands
+
+  uulabmayalandshello:
+    name: Hola
+    entities:
+      - script.unidoshola
 
   uulabmayalandswelcome:
     name: Bienvenida
