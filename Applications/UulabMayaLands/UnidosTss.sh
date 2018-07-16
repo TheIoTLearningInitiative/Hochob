@@ -13,8 +13,13 @@ export UNIDOS_NAME="Unidos"
 export UNIDOS_PATH=$(readlink -f "$0")
 export UNIDOS_DIRECTORY=$(dirname "$UNIDOS_PATH")
 
-# Unidos Buenos Dias
-LOCAL_PHRASE="Buenos días Unidos de Guadalajara."
+LOCAL_INSTITUTION=`Name.sh`
+LOCAL_DEVICE="NohochTata"
+LOCAL_VOLUME="1.0"
+LOCAL_LANGUAGE=`Language.sh`
+LOCAL_TTS_ENGINE="espeak"
+
+LOCAL_PHRASE="Unidos de Guadalajara? Hola!"
 
 # =============================================================================
 # Functions
@@ -28,6 +33,7 @@ LOCAL_PHRASE="Buenos días Unidos de Guadalajara."
 
 LogPid.sh $UNIDOS_PID $UNIDOS_NAME
 
-AmikooVoice.sh spanish "$LOCAL_PHRASE"
+StreamText.sh "$LOCAL_DEVICE" "$LOCAL_LANGUAGE" "$LOCAL_TTS_ENGINE" \
+              "$LOCAL_PHRASE"
 
 # End of File
