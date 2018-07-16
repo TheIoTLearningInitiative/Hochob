@@ -626,7 +626,7 @@ homeassistant:
     # Uulab Maya Lands
 
     script.unidos:
-      friendly_name: Bienvenidos a su casa!
+      friendly_name: Bienvenidos a su casa
       icon: mdi:gamepad-variant
 
     script.pasion:
@@ -634,7 +634,7 @@ homeassistant:
       icon: mdi:gamepad-variant
 
     script.compromiso:
-      friendly_name: Hora de Despedirnos
+      friendly_name: Hasta Pronto
       icon: mdi:gamepad-variant
 
     script.empatia:
@@ -2381,6 +2381,7 @@ group:
     entities:
       - script.80286
       - script.loteriamexicana
+      - script.carasygestos
 
   uulabmayalandschatting:
     name: Cotorreo
@@ -2395,6 +2396,6 @@ group:
       - script.compromiso
 
   uulabmayalandstechnical:
-    name: Technical
+    name: Techie
     entities:
       - script.empatia
