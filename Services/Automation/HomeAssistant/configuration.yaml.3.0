@@ -1336,8 +1336,8 @@ shell_command:
 
   # Game Maya Lands
 
-  loteriamexicana: ~/CodeLabs/Hochob/Services/Games/LoteriaMexicana/LoteriaMexicana.sh
-  carasygestos: ~/CodeLabs/Hochob/Services/Games/CarasYGestos/CarasYGestos.sh
+  loteriamexicana: ~/CodeLabs/Hochob/Applications/GameMayaLands/LoteriaMexicana/LoteriaMexicana.sh
+  carasygestos: ~/CodeLabs/Hochob/Applications/GameMayaLands/CarasYGestos/CarasYGestos.sh
 
   # Uulab Maya Lands
 

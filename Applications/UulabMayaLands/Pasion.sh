@@ -25,7 +25,7 @@ LOCAL_PHRASE[4]="¿Como me llamo yo?"
 
 choosePhrase()
 {
-    rand=$[ $RANDOM % 50 ]
+    rand=$[ $RANDOM % 5 ]
     LOCAL_PHRASE=${LOCAL_PHRASE[$rand]}
 }
 

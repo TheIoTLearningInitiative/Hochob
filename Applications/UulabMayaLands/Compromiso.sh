@@ -16,7 +16,7 @@ export COMPROMISO_DIRECTORY=$(dirname "$COMPROMISO_PATH")
 # Unidos
 LOCAL_INSTITUTION_NAME=`Unidos`
 LOCAL_EVENT_NAME_SPANISH="Visital Intel 2018"
-LOCAL_PHRASE="Hola \
+LOCAL_PHRASE="Hola, \
               Mundo"
 
 LOCAL_LANGUAGE[0]="spanish"
@@ -37,6 +37,6 @@ chooseLanguage()
 
 LogPid.sh $COMPROMISO_PID $COMPROMISO_NAME
 
-
+AmikooVoice.sh spanish ${LOCAL_PHRASE}
 
 # End of File
