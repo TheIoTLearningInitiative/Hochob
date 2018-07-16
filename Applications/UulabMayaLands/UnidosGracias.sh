@@ -16,12 +16,12 @@ export UNIDOS_DIRECTORY=$(dirname "$UNIDOS_PATH")
 # Unidos Buenos Dias
 LOCAL_PHRASE="Todos tenemos un lugar en el mundo, una misión en este hermoso camino que llamamos vida, \
               y cada vez que nos movemos, lo estremecemos y lo hacemos mas grande. \
-              Gracias amigos por ser nuestra fuenta de inspiracion para formar una sociedad incluyente \
-              y sensible que une nuetsros corazones y a través de experiencias generamos juntos empatía, \
+              Gracias Amigos por ser nuestra fuenta de inspiracion para buscar formar una sociedad incluyente \
+              y sensible que una nuestros corazones y a través de experiencias generemos juntos empatía. \
               Gracias Aliados por permitirse desarrollar otras habilidades, alcanzar la plenitud, \
               experimentar otras realidades y tener una transformación personal. \
               Gracias Unidos por unirnos como personas con y sin discapacidad para complementarnos \
-              y visualizar lo que podemos lograr si avazamos Unidos, y así, transformamos juntas nuestras vidas. \
+              y visualizar lo que podemos lograr si avanzamos Unidos, y así, transformamos juntas nuestras vidas. \
               Estamos hoy todos reunidos para devolver la conciencia al mundo. \
               Dispongamos a Compartir, Confiar y transformar. Es un honor tenerlos aqui con nosotros.\
               "
