@@ -2403,7 +2403,6 @@ group:
   uulabmayalandsgames:
     name: Juegos
     entities:
-      - script.80286
       - script.loteriamexicana
       - script.carasygestos
 
@@ -2413,6 +2412,7 @@ group:
       - script.pasion
       - script.chip
       - script.meccanoid
+      - script.80286
 
   uulabmayalandsthankyou:
     name: Bienvenida
