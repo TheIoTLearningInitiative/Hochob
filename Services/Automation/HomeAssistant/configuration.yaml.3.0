@@ -629,15 +629,15 @@ homeassistant:
       friendly_name: Bienvenidos a su casa!
       icon: mdi:gamepad-variant
 
-    script.pasion
+    script.pasion:
       friendly_name: Pregunta al Azar
       icon: mdi:gamepad-variant
 
-    script.compromiso
+    script.compromiso:
       friendly_name: Hora de Despedirnos
       icon: mdi:gamepad-variant
 
-    script.empatia
+    script.empatia:
       friendly_name: Verifiquemos Infraestructura
       icon: mdi:gamepad-variant
 
@@ -1907,6 +1907,7 @@ group:
       - group.uulabmayalandsgames
       - group.uulabmayalandschatting
       - group.uulabmayalandsthankyou
+      - group.uulabmayalandstechnical
 
   # Captain Maya Lands: Language
 
