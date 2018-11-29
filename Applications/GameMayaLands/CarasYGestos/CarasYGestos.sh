@@ -25,9 +25,10 @@ LOCAL_GAME="CarasYGestos"
 # Main
 # =============================================================================
 
-LOCAL_IMAGE=`find $GAMES_CARASYGESTOS/Image/ -type f | shuf -n 1`
+LOCAL_IMAGE=`find $LOCAL_GAME/Image/ -type f | shuf -n 1`
 LOCAL_IMAGE=`echo $LOCAL_IMAGE | rev | cut -d'/' -f-1 | rev`
 
-AmikooCommunication.sh "$LOCAL_GAME" "Image" "$LOCAL_IMAGE"
+eog -f $LOCAL_GAME/Image/${LOCAL_IMAGE} &
+#AmikooCommunication.sh "$LOCAL_GAME" "Image" "$LOCAL_IMAGE"
 
 # End of File

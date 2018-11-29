@@ -22,7 +22,7 @@ with open("LasCartasSimple.rnd", "w") as f:
         image = unicodedata.normalize('NFKD', image).encode('ASCII', 'ignore')
         print image
         image_path = 'LoteriaMexicana/Image/' + image
-        image_command = 'eog -fw ' + image_path + ' &'
+        image_command = 'eog -f ' + image_path + ' &'
         os.system(image_command)
         voice_command = 'espeak -v es-la -a 100 -p 50 -s 170 ' + line
         os.system(voice_command)
