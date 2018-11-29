@@ -21,8 +21,13 @@ with open("LasCartasSimple.rnd", "w") as f:
         image = unicode(image,'utf-8')
         image = unicodedata.normalize('NFKD', image).encode('ASCII', 'ignore')
         print image
-        os.system('mosquitto_pub -h 10.215.56.158 -p 1883 -q 2 -t amikoo/tradition/image -m LoteriaMexicana' + '/' + image)
-        os.system('mosquitto_pub -h 10.215.56.158 -p 1883 -q 2 -t amikoo/sound/speechsynthetizer/decir -m "' + line + '"')
+        voice_command = 'espeak -v es-la -a 100 -p 50 -s 170 ' + line
+        os.system(voice_command)
+        image_path = 'LoteriaMexicana/Image/' + image
+        image_command = 'eog -sf ' + image_path + ' &'
+        os.system(image_command)
+        #os.system('mosquitto_pub -h 10.215.56.158 -p 1883 -q 2 -t amikoo/tradition/image -m LoteriaMexicana' + '/' + image)
+        #os.system('mosquitto_pub -h 10.215.56.158 -p 1883 -q 2 -t amikoo/sound/speechsynthetizer/decir -m "' + line + '"')
         time.sleep(5)
     f.close()
 
